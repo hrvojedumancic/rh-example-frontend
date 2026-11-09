@@ -13,7 +13,7 @@ const activity = ["Payment received from Mary Johnson", "New patient registered:
 export default function Dashboard() {
   return (
     <>
-      <Typography variant="h4" gutterBottom>Dashboard</Typography>
+      <Typography variant="h4" gutterBottom>Practice Dashboard</Typography>
       <Grid container spacing={3}>
         {stats.map((s) => (
           <Grid key={s.label} size={{ xs: 12, sm: 6, md: 3 }}>
