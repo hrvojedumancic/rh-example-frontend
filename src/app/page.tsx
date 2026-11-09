@@ -34,7 +34,7 @@ export default function Dashboard() {
   return (
     <>
       <Typography variant="h4" gutterBottom>
-        Third Practice Dashboard
+        Fourth and I hope final Practice Dashboard
       </Typography>
       <Grid container spacing={3}>
         {stats.map((s) => (
