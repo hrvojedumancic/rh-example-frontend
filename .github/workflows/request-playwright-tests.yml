@@ -1,0 +1,16 @@
+# Tells rh-example-playwright that a PR was opened so it can generate tests for it.
+name: Request Playwright tests
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          gh api repos/hrvojedumancic/rh-example-playwright/dispatches \
+            -f event_type=frontend-pr \
+            -F "client_payload[pr_number]=${{ github.event.pull_request.number }}"
+        env:
+          GH_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
